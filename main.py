@@ -15,7 +15,7 @@ def handle_post():
 
         if data.get("request_type") == "customerlogin":
             
-            return (response.content, response.status_code, response.headers.items())
+            return "done"
 
         return jsonify({"error": "Unknown request_type"}), 400
 
