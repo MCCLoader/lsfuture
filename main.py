@@ -14,8 +14,14 @@ def handle_post():
         data = request.get_json()
 
         if data.get("request_type") == "customerlogin":
-            
-            return "done"
+            response = requests.post(
+                "https://your-secret-api.com/login",
+                json={
+                    "user": data.get("user"),
+                    "hwid": data.get("hwid")
+                }
+            )
+            return (response.content, response.status_code, response.headers.items())
 
         return jsonify({"error": "Unknown request_type"}), 400
 
