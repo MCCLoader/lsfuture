@@ -8,7 +8,7 @@ app = Flask(__name__)
 def handle_get():
     return "Server is running!"
 
-@app.route('/', methods=['POST'])
+@app.route('/api', methods=['POST'])
 def handle_post():
     try:
         data = request.get_json()
