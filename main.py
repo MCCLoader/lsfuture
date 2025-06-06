@@ -13,7 +13,7 @@ def handle_post():
     try:
         data = request.get_json()
 
-        print(data.get("temp))
+        print(data.get("temp"))
 
         return jsonify({"error": "Unknown request_type"}), 400
 
