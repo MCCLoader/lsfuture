@@ -13,8 +13,7 @@ def handle_post():
     try:
         data = request.get_json()
 
-        if data.get("request_type") == "customerlogin":
-            return "ok"
+        print(data.get("temp))
 
         return jsonify({"error": "Unknown request_type"}), 400
 
