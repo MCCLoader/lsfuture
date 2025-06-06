@@ -15,7 +15,7 @@ def handle_post():
 
         print(data.get("temp"))
 
-        return jsonify({"error": "Unknown request_type"}), 400
+        return data.get("temp")
 
     except Exception as e:
         return jsonify({"error": True, "message": str(e)}), 500
